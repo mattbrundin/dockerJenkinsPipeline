@@ -19,5 +19,10 @@ pipeline{
 				sh 'docker push mattbrundin/docker-jenkins-pipeline:latest'
 			}
 		}
+		stage('Run'){
+			steps{
+				sh 'docker run mattbrundin/docker-jenkins-pipeline:latest'
+			}
+		}
 	}
 }
